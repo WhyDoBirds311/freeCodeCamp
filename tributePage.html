@@ -2,36 +2,122 @@
 <html>
 <head>
 	<title>Tribute Page: My Chemical Romance</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+
+	<style type="text/css" rel="stylesheet">
+
+		body {
+			background-color: #111;
+			color: #ddd;
+		}
+
+		 .main {
+			display: grid;
+			grid-template-columns: auto;
+			text-align: center;
+		}
+
+		.tribute-info {
+			width: 60%;
+			margin: auto;
+			text-align: center;
+			font-family: Verdana;
+		}
+
+		.tribute-info ul {
+			margin-top: 2em;
+			text-align: justify;
+			line-height: 1.7em;
+			background-color: #222;
+			padding: 4em;
+		}
+
+		.tribute-info ul li {
+			text-align: left;
+			margin-top: 1em;
+		}
+
+		.title {
+			text-transform: capitalize;
+		}
+
+		.img-div {
+			margin-bottom: 5em;
+		}
+
+		.link-para {
+			font-family: Courier;
+		}
+
+		#tribute-link {
+			color: red;
+		}
+
+		.img-div .image{
+			border-radius: 25px;
+			position: relative;
+			max-width: 100%;
+			display: block;
+			text-align: center;
+			margin: auto;
+		}
+
+		.img-caption {
+			margin-top: 2em;
+		}
+	</style>
 </head>
 <body>
-	<div id="main">
+	<main id="main" class="main">
 		<div>
 			<h1 id="title">My Chemical Romance</h1>
-			<div id="img-div">
-				<img id="image" src="mcr1.jpeg" alt="My Chemical Romance" />
-				<div id="img-caption">
+			<div id="img-div" class="img-div">
+				<img id="image" class="image" src="MCR.jpeg" alt="My Chemical Romance" />
+				<div id="img-caption" class="img-caption">
 					<em><q>My Chemical Romance (commonly abbreviated MCR or shortened to My Chem) is an American rock band from Newark, New Jersey</em>.
 				</div>
-				<p id="tribute-info">
+			</div>
+
+			<div id="tribute-info" class="tribute-info">
+					<h2 class="title">The band's career timeline</h2>
 					<ul>
 						<li>
-							<h4>Early career (2001–2002)</h4>
-							<p>The band was formed by frontman Gerard Way and drummer Matt Pelissier in Newark, New Jersey, soon after the September 11 attacks. Witnessing the World Trade Center towers fall influenced Way's life to the extent that he decided to start a band.</p>
+							<strong>Early career (2001–2002)</strong> -
+							<span>The band was formed by frontman Gerard Way and drummer Matt Pelissier in Newark, New Jersey, soon after the September 11 attacks.</span>
 						</li>
 						<li>
-							<h4>Three Cheers for Sweet Revenge (2003–2006)</h4>
-							<p>In 2003, the band signed a deal with Reprise Records. Following a tour with Avenged Sevenfold, the band began working on their second album, which was titled Three Cheers for Sweet Revenge, which was released on June 8, 2004. A month after the album's release, the band replaced Matt Pelissier with Bob Bryar. The band released four singles from the album: "I'm Not Okay (I Promise)", "Thank You for the Venom", "Helena", and "The Ghost of You". The album went platinum in just over a year of its release.</p>
+							<strong>Three Cheers for Sweet Revenge (2003–2006)</strong> - 
+							<span>In 2003, the band signed a deal with Reprise Records. the band began working on their second album, which was titled Three Cheers for Sweet Revenge</span>
 						</li>
 						<li>
-							<h4></h4>
-							<p></p>
+							<strong>The Black Parade (2006–2009)</strong> - 
+							<span>On August 3, 2006, the band completed shooting the videos for their first two singles from the album, "Welcome to the Black Parade" and although not released until January 2007, "Famous Last Words".</span>
+						</li>
+						<li>
+							<strong>Danger Days: The True Lives of the Fabulous Killjoys (2009–2011)</strong>-
+							<span>On May 27, 2009, My Chemical Romance's web designer, Jeff Watson, announced via the band's website that the band was headed to the studio to record their fourth full-length album.</span>
+						</li>
+						<li>
+							<strong>Conventional Weapons and break-up (2011–2013)</strong>-
+							<span>In February 2012, members of My Chemical Romance revealed that they had been building a studio in Los Angeles to record music for the band's fifth album under the working title MCR5, now with touring keyboardist James Dewees as an official member.
+
+							On March 22, 2013, the band announced their break-up on their official website, issuing this statement:
+							</span>
+						</li>
+						<li>
+							<strong>May Death Never Stop You and post-break-up (2013–2019)</strong> -
+							<span>On March 25, 2014, the band released a greatest hits collection, titled May Death Never Stop You, containing material spreading their entire career, as well a single unreleased track. The track "Fake Your Death" was made available digitally on February 17. It is the only song in MCR's discography that has James Dewees playing on keyboards.</span>
+						</li>
+						<li>
+							<strong>Reunion (2019–present)</strong> -
+							<span>On October 31, 2019, the band announced they would be reuniting in Los Angeles on December 20 and a new merchandise line. The concert grossed $1,451,745, with an attendance of 5,113.</span>
 						</li>
 					</ul>
-				</p>
-				<a id="tribute-link" href="https://en.wikipedia.org/wiki/My_Chemical_Romance" target="_blank"></a>
+				</div>
+				<strong><p class="link-para">Please see the Wikipedia page about this band. <a id="tribute-link" href="https://en.wikipedia.org/wiki/My_Chemical_Romance" target="_blank">Click this link!</a></p></strong>
 			</div>
 		</div>
-	</div>
+	</main>
 </body>
 </html>
 <script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" language="javascript"></script>
