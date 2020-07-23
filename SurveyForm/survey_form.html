@@ -5,9 +5,105 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
 
 	<style type="text/css" rel="stylesheet">
-		body {
+
+		body, .form-main, #survey-form {
 			font-family: Poppins, sans-serif;
 		}
+
+		body {
+			background-color: rgb(32, 159, 223);
+		}
+
+		#title, #description {
+			color: #eee;
+			font-weight: normal;
+			letter-spacing: 0.1em;
+		}
+
+		#description {
+			font-style: italic;
+			font-size: 1.1em;
+		}
+
+		#title {
+			font-family: "Poppins", sans-serif;
+		}
+
+		.form-main {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+		}
+
+		.container {
+			display: flex;
+			align-items: stretch;
+			justify-content: flex-start;
+			flex-direction: column;
+		}
+
+		#survey-form {
+			background: rgba(0,31,51,0.8);
+			padding: 2em 4em;
+			color: #fff;
+			text-transform: capitalize;
+			width: 50%;
+			border-radius: 0.5em;
+		}
+
+		label {
+			margin-top: 4em;
+			opacity: 1;
+		}
+
+		label, #dropdown {
+			font-family: Verdana;
+			margin: 0.9em 0;
+			text-transform: capitalize;
+		}
+
+		input, #dropdown {
+			padding: 0.7em;
+			margin-bottom: 0.5em 1em; 
+			font-family: Verdana;
+		}
+
+		.checkdiv {
+			margin: 0.4em 0em;
+		}
+
+		.container label {
+			margin-top: 1.4em;
+		}
+
+		textarea {
+			height: 14em;
+			padding: 2em;
+		}
+
+		button {
+			padding: 0.9em;
+			margin: auto;
+			margin-top: 2em;
+			width: 50%;
+			text-align: center;
+			border-radius: 2em;
+			box-shadow: 1px solid grey;
+			outline: none;
+			border: none;
+			text-transform: uppercase;
+			font-weight: 100;
+			letter-spacing: 0.2em;
+			background-color: #00e600;
+			color: #222;
+		}
+
+		button:hover {
+			background-color: #ffff00;
+			box-shadow: 2px 5px 5px #555;
+		}
+
 	</style>
 </head>
 <body>
@@ -15,9 +111,54 @@
 		<h1 id="title">Sample Survey Form</h1>
 		<p id="description">Please help us improve our site.</p>
 		<form id="survey-form">
-			<label for="name">Name</label>
-			<input type="text" name="name">
-			<label for="name"></label>
+		<div class="container">	
+			<label for="name-label" id="name-label">name</label>
+			<input id="name" type="text" name="name" placeholder="Enter your name..." required>
+			<label for="email-label" id="email-label">email</label>
+			<input id="email" type="email" name="email" placeholder="Enter your email..." required>
+			<label for="number-label" id="number-label">age</label>
+			<input id="number" type="number" name="age" min="1" max="200" placeholder="Enter your age...">
+			<label>Select your status:</label>
+			<select id="dropdown" name="role">
+				<option value="" selected="selected" disabled></option>
+				<option value="student">student</option>
+				<option value="employee">employee</option>
+				<option value="employer">employer</option>
+			</select>
+		</div>
+
+		<div class="container">
+			<label>Gender:</label> 
+			<div>
+				<input type="radio" name="gender" value="male">
+				<label for="male">male</label>
+				<input type="radio" name="gender" value="female">
+				<label for="female">female</label>
+				<input type="radio" name="gender" value="other">
+				<label for="other">other</label>
+			</div>
+		</div>
+
+		<div class="container">
+			<label>What do you want to be improve in this site?</label>
+				<div class="checkdiv">
+					<input type="checkbox" name="feature" value="design">
+					<label for="design">Website's Design</label>
+				</div>
+				<div class="checkdiv">
+					<input type="checkbox" name="feature" value="functionality">
+					<label for="functionality">Functionality</label>
+				</div>
+				<div class="checkdiv">
+					<input type="checkbox" name="feature" value="content">
+					<label for="content">Content/Article</label>
+				</div>
+		</div>
+		<div class="container">
+			<label>comments & feedback</label>
+			<textarea row="5" col="20" placeholder="Comments here ..."></textarea>
+			<button id="submit" class="submit">Submit</button>
+		</div>
 		</form>
 	</main>
 </body>
