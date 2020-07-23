@@ -3,27 +3,129 @@
 <head>
 	<title>Landing Product Page</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0" charset="utf-8">
-
 	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<style type="text/css" rel="stylesheet">
 		
 		#header-img {
 			max-width: 100%;
-			height: 8em;
+			height: 5em;
 			position: relative;
 			margin-left: 3em;
 		}
 
-		#header {
-			height: 10em;
+		#header, .main {
 			width: 100%;
+			font-family: Verdana, sans-serif;
+		}
+
+		#header {
+			position: sticky;
+			position: -webkit-sticky;
+			border-bottom: 1px solid #ccc;
+			background-color: #fff;
+			top: 0;
+			z-index: 5;
+			display: block;
+			padding: 1em;
+		}
+
+		#nav-bar {
+			display: flex;
+			align-items: flex-end;
+			justify-content: center;
+		}
+
+		#footer {
+			width: 100%;
+			background-color: #111;
+			color: #fff;
+			font-family: Verdana, sans-serif;
+		}
+
+		.navbar-nav {
+			list-style-type: none;
+		}
+
+		.main-content {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			background-color: #fff;
+			font-family: Verdana, sans-serif;
+		}
+
+		.services {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 80%;
+		}
+
+		.card {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			width: 40%;
+			margin: 1em;
+			border: 1px solid #aaa;
+			border-radius: 25px;
+		}
+
+		#footer p {
+			display: block;
+			padding: 3em 0;
+			margin: 0;
+		}
+
+		.card p{
+			margin-top: 2em;
+			text-align: center;
+		}
+
+		.video, #contact {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			width: 100%;
+			margin-top: 2em;
+		}
+
+		#form {
+			display: flex;
+			align-items: stretch;
+			justify-content: center;
+			flex-direction: column;
+			width: 50%;
+		}
+
+		#form input {
+			padding: 0.7em;
+			margin: 2em;
+		}
+
+		#form input[type="submit"] {
+			border-radius: 2em;
+			border: none;
+			width: 20%;
+			margin: auto;
+			margin-bottom: 2em;
+			text-align: center;
+		}
+
+		@media only screen and (max-width: 998px) {
+			.services {
+				flex-direction: column;
+			}
 		}
 
 	</style>
@@ -31,19 +133,60 @@
 <body>
 	<header id="header">
 		<div class="row">
-			<div class="col-md-6">
-				<img id="header-img" src="perlogo.png" alt="personal logo">
+			<div class="col-md-8">
+				<img id="header-img" src="https://github.com/WhyDoBirds311/freeCodeCamp/blob/master/LandingProductPage/perlogo.png?raw=true" alt="personal logo">
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-4">
+				<nav id="nav-bar" class="collapse navbar-collapse nav mx-auto w-100">
+					<ul class="navbar-nav">
+						<li class="nav-item"><a class="btn nav-link" href="#services">Services</a></li>
+						<li class="nav-item"><a class="btn nav-link" href="#video">Video</a></li>
+						<li class="nav-item"><a class="btn nav-link" href="#contact">Contact Us</a></li>
+					</ul>
+				</nav>
 			</div>
 		</div>
 	</header>
 
-	<main>
+	<main class="main-content">
+		<h3>Services</h3>
+		<div class="services" id="services">
+			<div class="col-md-4 card">
+				<h4>Build</h4>
+				<i class="fa fa-gear fa-5x"></i>
+				<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+
+			<div class="col-md-4 card">
+				<h4>Repair</h4>
+				<i class="fa fa-wrench fa-5x"></i>
+				<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+
+			<div class="col-md-4 card">
+				<h4>Low Cost</h4>
+				<i class="fa fa-money fa-5x"></i>
+				<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+		</div>
+
+		<div class="video">
+			<h3>Video</h3>
+			<iframe id="video" width="420" height="315" src="https://www.youtube.com/embed/hWB2UHCT0dw" frameborder="0" allowfullscreen>
+			</iframe>
+		</div>
+
+		<div class="contact-form" id="contact">
+			<h3>Contact Us</h3>
+			<form id="form" action="https://www.freecodecamp.com/email-submit" method="GET">
+				<input type="email" name="email" id="email" placeholder="Enter your email address..." required>
+				<input type="submit" id="submit">
+			</form>
+		</div>
 	</main>
 
-	<footer id="footer">
-		Copyright &copy; 2020,  WhyDoBirds Inc.
+	<footer id="footer" class="d-block w-100 m-auto text-center">
+		<p>Copyright &copy; 2020,  WhyDoBirds Inc.</p>
 	</footer>
 </body>
 </html>
